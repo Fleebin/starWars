@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useFetch } from '../../Hooks/useFetch';
 interface Films {
    episode_id: number;
@@ -23,9 +24,11 @@ export const FilmsList = ()=> {
             onChange={(ev) => setSearch(ev.target.value)}
          />
          <ul>
-            {filmFilter?.map(film => (
-               <li key={film.episode_id}>
-                  {film.title}
+            {filmFilter?.map((film, key) => (
+               <li key={key}>
+                  <Link to={`/films/${key+1}`}>
+                     {film.title}
+                  </Link>
                </li>
             ))}
          </ul>
