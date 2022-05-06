@@ -1,12 +1,11 @@
-import { FilmsList } from "./FilmsList/FilmsList"
-import { PeopleList } from "./People/PeopleList"
+import { AppRoutes } from "../../Main/Router/Router"
+import { Header } from "../Components/Header/Header"
 
 export const App = ()=> {
-
   return (
      <>
-      <FilmsList />
-      <PeopleList />
+      <Header />
+      <AppRoutes />
      </>
   )
 }
