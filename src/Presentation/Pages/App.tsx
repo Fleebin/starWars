@@ -1,11 +1,12 @@
 import { FilmsList } from "./FilmsList/FilmsList"
-import { PersoList } from "./PersoList/PersoList"
+import { PeopleList } from "./People/PeopleList"
+
 export const App = ()=> {
 
   return (
      <>
-     <FilmsList />
-     <PersoList />
+      <FilmsList />
+      <PeopleList />
      </>
   )
 }
