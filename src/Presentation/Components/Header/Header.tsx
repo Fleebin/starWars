@@ -1,15 +1,21 @@
+import { Link } from "react-router-dom";
+import { Nav } from "../../Styles/styles";
+import logo from "../../Assets/Images/logo.png";
 
-import { Link } from "react-router-dom"
-
-export const Header = ()=> {
-
-    return (
-     <>
-        <nav>
-            <Link to="character">Personagens</Link>
-            <Link to="films">Filmes</Link>
-            <Link to="register">Cadastrar-se</Link>
-        </nav>
-     </>
-  )
-}
+export const Header = () => {
+  return (
+    <>
+      <Nav>
+        <Link className="link" to="character">
+          Personagens
+        </Link>
+        <Link className="link" to="films">
+          Filmes
+        </Link>
+        <Link className="form" to="register">
+          Cadastrar-se
+        </Link>
+      </Nav>
+    </>
+  );
+};
