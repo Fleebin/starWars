@@ -1,11 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useFetch } from '../../Hooks/useFetch';
+import {Character} from '../../../Shared/Interfaces'
 
-interface Character {
-   id: number;
-   name: string;
-}
 
 export const CharactersList = ()=> {
 

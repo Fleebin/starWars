@@ -1,15 +1,12 @@
 import React from "react"
 import { useParams } from "react-router-dom"
 import { useDetails } from "../../Hooks/useDetails"
+import {Character} from '../../../Shared/Interfaces'
 
-interface People {
-    id: number;
-    name: string;
-}
 
 export const CharacterDetails = () => {
     const {id} = useParams();
-    const {data} = useDetails<People>(`people/${id}`)
+    const {data} = useDetails<Character>(`people/${id}`)
 
     if (!data) {
         return <p>Carregando...</p>

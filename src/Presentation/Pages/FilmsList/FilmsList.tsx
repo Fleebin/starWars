@@ -1,10 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useFetch } from '../../Hooks/useFetch';
-interface Films {
-   episode_id: number;
-   title: string;
- }
+import {Films} from '../../../Shared/Interfaces'
+
 
 export const FilmsList = ()=> {
    const { data } = useFetch<Films[]>('/films');

@@ -1,11 +1,9 @@
 import React from "react"
 import { useParams } from "react-router-dom"
 import { useDetails } from "../../Hooks/useDetails"
+import {Films} from '../../../Shared/Interfaces'
 
-interface Films {
-    id: number;
-    title: string;
-}
+
 
 export const FilmDetails = () => {
     const {id} = useParams();

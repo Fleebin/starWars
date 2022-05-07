@@ -1,13 +1,6 @@
 import { useFormik } from "formik";
+import {People} from '../../../Shared/Interfaces'
 
-interface People {
-  name: string;
-  birthData: string;
-  email: string;
-  phone: string;
-  password: string;
-  summary: string;
-}
 
 export const Register = () => {
 
