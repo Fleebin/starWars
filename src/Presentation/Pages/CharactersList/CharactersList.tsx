@@ -2,17 +2,23 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useFetch } from '../../Hooks/useFetch';
 
-interface People {
+interface Character {
    id: number;
    name: string;
 }
 
-export const PeopleList = ()=> {
-   const { data } = useFetch<People[]>('/people');
+export const CharactersList = ()=> {
+
+   const { data } = useFetch<Character[]>('/people');
+
    const [search, setSearch] = useState('');
 
    const lowerSearch = search.toLowerCase();
-   const peoplesFilter = data?.filter((people) => people.name.toLowerCase().includes(lowerSearch));
+
+   const charactersFilter = data?.filter((character) => character.name
+   .toLowerCase()
+   .includes(lowerSearch));
+
    if (!data) {
      return <p>Carregando...</p>
    }
@@ -24,10 +30,10 @@ export const PeopleList = ()=> {
             onChange={(ev) => setSearch(ev.target.value)}
          />
          <ul>
-            {peoplesFilter?.map((people, key) => (
+            {charactersFilter?.map((character, key) => (
                <li key={key}>
-                  <Link to={`/people/${key+1}`}>
-                     {people.name}
+                  <Link to={`/character/${key+1}`}>
+                     {character.name}
                   </Link>
                </li>
             ))}

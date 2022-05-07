@@ -7,7 +7,7 @@ interface People {
     name: string;
 }
 
-export const PeopleDetails = () => {
+export const CharacterDetails = () => {
     const {id} = useParams();
     const {data} = useDetails<People>(`people/${id}`)
 
