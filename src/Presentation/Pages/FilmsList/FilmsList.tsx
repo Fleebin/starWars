@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useFetch } from "../../Hooks/useFetch";
-import { Films } from "../../../Shared/Interfaces";
+import { useFetch } from "../../Hooks/useFetchFilms";
+import { Films } from "../../../Shared/Entites/Film/Film";
 import {
   Title,
   SubTitle,
@@ -22,7 +22,7 @@ export const FilmsList = () => {
   );
 
   if (!data) {
-    return <p>Carregando...</p>;
+    return <Main>Carregando...</Main>;
   }
 
   return (

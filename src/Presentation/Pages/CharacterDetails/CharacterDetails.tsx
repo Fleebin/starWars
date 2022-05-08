@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useDetails } from "../../Hooks/useDetails";
-import { Character } from "../../../Shared/Interfaces";
+import { Character } from "../../../Shared/Entites/Character/Character";
 import {
   CardInfo,
   Grid,
@@ -16,7 +16,7 @@ export const CharacterDetails = () => {
   const { data } = useDetails<Character>(`people/${id}`);
 
   if (!data) {
-    return <p>Carregando...</p>;
+    return <Main>Carregando...</Main>;
   }
   return (
     <Container>

@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Grid = styled.div`
-    display: grid; 
+    display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: repeat(2, 1fr); 
+    grid-template-rows: 1fr 2fr; 
     grid-column-gap: 25px;
     grid-row-gap: 25px; 
 `;
@@ -25,7 +25,7 @@ export const CardVei = styled.div`
     opacity: 1;
     padding: 1.5rem 1rem;
     max-width: 768px;
-    height: 300px;
+    height: 290px;
     grid-area: 2 / 1 / 3 / 2;
     .flex {
         display: flex;

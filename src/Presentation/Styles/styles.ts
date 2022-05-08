@@ -25,6 +25,10 @@ export const Nav = styled.nav`
         padding: 0.625rem 1.0625rem;
         color: #FAFAFA;
     }
+    img {
+        width: 98px;
+        height: 75px;
+    }
 `;
 export const Main = styled.h1`
     font-size: 2.5rem;

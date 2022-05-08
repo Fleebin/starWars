@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useFetch } from "../../Hooks/useFetchChar";
-import { Character } from "../../../Shared/Interfaces";
+import { Character } from "../../../Shared/Entites/Character/Character";
 import {
   Title,
   SubTitle,
@@ -22,7 +22,7 @@ export const CharactersList = () => {
   );
 
   if (!data) {
-    return <Description>Carregando...</Description>;
+    return <Main>Carregando...</Main>;
   }
   return (
     <Container>
@@ -44,13 +44,13 @@ export const CharactersList = () => {
             </Info>
             <Info>
               <SubTitle>Descrição fisica</SubTitle>
-              {/* <Description>{character.species}</Description>
-              <Description>{character.height}</Description> */}
+              {/* <Description>{character.species}</Description> */}
+              <Description>Altura: {character.height} metro</Description>
             </Info>
             <Info>
               <SubTitle>Veículos usados</SubTitle>
-              {/* <Description>{character.vehicles}</Description>
-              <Description>{character.starships}</Description> */}
+              {/* <Description>{character.vehiclesFormated}</Description> */}
+              {/* <Description>{character.starships}</Description> */}
             </Info>
             <Footer>
               <Link className="link" to={`/character/${key + 1}`}>

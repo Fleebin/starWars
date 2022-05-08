@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useDetails } from "../../Hooks/useDetails";
-import { Films } from "../../../Shared/Interfaces";
+import { Films } from "../../../Shared/Entites/Film/Film";
 import {
   CardChars,
   Grid,
@@ -16,7 +16,7 @@ export const FilmDetails = () => {
   const { data } = useDetails<Films>(`films/${id}`);
 
   if (!data) {
-    return <p>Carregando...</p>;
+    return <Main>Carregando...</Main>;
   }
 
   return (
