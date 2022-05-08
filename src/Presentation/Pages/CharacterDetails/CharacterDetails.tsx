@@ -7,6 +7,7 @@ import {
   Grid,
   CardVei,
   CardFilms,
+  Main,
 } from "../../Styles/Pages/CharDetails/styles";
 import { Title, Description, Container } from "../../Styles/styles";
 
@@ -19,7 +20,7 @@ export const CharacterDetails = () => {
   }
   return (
     <Container>
-      <Title>{data.name}</Title>
+      <Main>{data.name}</Main>
       <Grid>
         <CardInfo>
           <Title>Informações físicas</Title>

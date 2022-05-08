@@ -40,3 +40,10 @@ export const CardChars = styled.div`
     height: 661px;
     grid-area: 1 / 2 / 3 / 3;
 `;
+export const Main = styled.h1`
+    font-size: 2.5rem;
+    color: #FFE81F;
+    text-align: left;
+    margin-top: 48px;
+    margin-bottom: 40px;
+`;

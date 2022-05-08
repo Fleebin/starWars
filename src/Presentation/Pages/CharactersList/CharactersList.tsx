@@ -8,6 +8,7 @@ import {
   Description,
   Container,
   Input,
+  Main,
 } from "../../Styles/styles";
 import { Grid, Info, Card, Footer } from "../../Styles/Pages/List/styles";
 
@@ -25,6 +26,7 @@ export const CharactersList = () => {
   }
   return (
     <Container>
+      <Main>Personagens</Main>
       <Input
         placeholder="filtre por nome do personagem"
         type="text"
@@ -37,8 +39,8 @@ export const CharactersList = () => {
             <Title>{character.name}</Title>
             <Info>
               <SubTitle>Nascimento</SubTitle>
-              <Description>{character.birth_year}</Description>
-              <Description>{character.homeworldFormated}</Description>
+              <Description>Data: {character.birth_year}</Description>
+              <Description>Planeta: {character.homeworldFormated}</Description>
             </Info>
             <Info>
               <SubTitle>Descrição fisica</SubTitle>

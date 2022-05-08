@@ -26,11 +26,18 @@ export const Nav = styled.nav`
         color: #FAFAFA;
     }
 `;
+export const Main = styled.h1`
+    font-size: 2.5rem;
+    color: #FFE81F;
+    text-align: center;
+    margin-top: 48px;
+`;
 export const Title = styled.h1`
     font-size: 1.5rem;
     color: #FFE81F;
 `;
 export const SubTitle = styled.h2`
+    margin-bottom: 8px;
     font-size: 1.125rem;
     color: #FAFAFA;
 `;
@@ -43,7 +50,7 @@ export const Input = styled.input`
     background: #303030;
     width: 570px;
     height: 40px;
-    margin: 42px 0 32px 0;
+    margin: 42px 25%;
     ::placeholder {
         color: #FAFAFA;
         text-transform: uppercase;

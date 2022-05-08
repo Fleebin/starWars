@@ -7,6 +7,7 @@ import {
   Grid,
   CardTec,
   CardSin,
+  Main,
 } from "../../Styles/Pages/FilmDetails/styles";
 import { Title, SubTitle, Description, Container } from "../../Styles/styles";
 
@@ -21,7 +22,7 @@ export const FilmDetails = () => {
   return (
     <>
       <Container>
-        <Title>{data.title}</Title>
+        <Main>{data.title}</Main>
         <SubTitle>Episódio {data.episode_id}</SubTitle>
         <Grid>
           <CardSin>
@@ -32,12 +33,14 @@ export const FilmDetails = () => {
           </CardSin>
           <CardTec>
             <Title>Ficha técnica</Title>
-            <div className="flex">
-              <Description>Diretor {data.director}</Description>
-              <Description>Produtores {data.producer}</Description>
-              <Description>Lançamento {data.release_date}</Description>
-            </div>
+            <SubTitle>Diretor </SubTitle>
+            <Description>{data.director}</Description>
+            <SubTitle>Produtores </SubTitle>
+            <Description>{data.producer}</Description>
+            <SubTitle>Lançamento </SubTitle>
+            <Description>{data.release_date}</Description>
           </CardTec>
+
           <CardChars>
             <Title>Aparecem nesse filme</Title>
             <SubTitle>Personagens</SubTitle>

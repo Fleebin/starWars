@@ -8,6 +8,7 @@ import {
   Description,
   Container,
   Input,
+  Main,
 } from "../../Styles/styles";
 import { Grid, Info, Card, Footer } from "../../Styles/Pages/List/styles";
 
@@ -26,6 +27,7 @@ export const FilmsList = () => {
 
   return (
     <Container>
+      <Main>Filmes</Main>
       <Input
         placeholder="filtre por nome do filme"
         type="text"

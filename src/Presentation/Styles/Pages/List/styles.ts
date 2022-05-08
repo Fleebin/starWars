@@ -15,6 +15,8 @@ export const Card = styled.div`
 `;
 export const Info = styled.div`
     text-align: left;
+    margin-top: 24px;
+    margin-bottom: 24px;
 `;
 export const Footer = styled.div`
     display: flex;
