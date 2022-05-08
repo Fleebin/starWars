@@ -1,9 +1,7 @@
 import { useFormik } from "formik";
-import {People} from '../../../Shared/Interfaces'
-
+import { People } from "../../../Shared/Interfaces";
 
 export const Register = () => {
-
   const formik = useFormik<People>({
     initialValues: {
       name: "",
@@ -11,17 +9,18 @@ export const Register = () => {
       email: "",
       phone: "",
       password: "",
-      summary: ""
+      summary: "",
+      cv: "",
+      charFav: "",
     },
-    onSubmit: values => {
-      console.log(values)
-    }
-  })
+    onSubmit: (values) => {
+      console.log(values);
+    },
+  });
 
   return (
     <>
       <form onSubmit={formik.handleSubmit}>
-
         <label htmlFor="name">NOME</label>
         <input
           id="name"
@@ -30,7 +29,7 @@ export const Register = () => {
           onChange={formik.handleChange}
           value={formik.values.name}
         />
-         <label htmlFor="birthData">DATA DE NASCIMENTO</label>
+        <label htmlFor="birthData">DATA DE NASCIMENTO</label>
         <input
           id="birthData"
           name="birthData"
@@ -38,7 +37,7 @@ export const Register = () => {
           onChange={formik.handleChange}
           value={formik.values.birthData}
         />
-         <label htmlFor="email">EMAIL</label>
+        <label htmlFor="email">EMAIL</label>
         <input
           id="email"
           name="email"
@@ -46,7 +45,7 @@ export const Register = () => {
           onChange={formik.handleChange}
           value={formik.values.email}
         />
-         <label htmlFor="phone">TELEFONE</label>
+        <label htmlFor="phone">TELEFONE</label>
         <input
           id="phone"
           name="phone"
@@ -55,9 +54,7 @@ export const Register = () => {
           value={formik.values.phone}
         />
         <button type="submit">ENVIAR</button>
-
       </form>
     </>
   );
-
 };
