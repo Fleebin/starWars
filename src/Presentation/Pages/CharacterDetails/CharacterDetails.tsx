@@ -7,7 +7,7 @@ import {
   Grid,
   CardVei,
   CardFilms,
-} from "../../Styles/Pages/Details/styles";
+} from "../../Styles/Pages/CharDetails/styles";
 import { Title, Description, Container } from "../../Styles/styles";
 
 export const CharacterDetails = () => {

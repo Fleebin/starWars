@@ -12,7 +12,6 @@ export const Card = styled.div`
     opacity: 1;
     padding: 1.5rem 1rem;
     max-width: 273px;
-    height: 448px;
 `;
 export const Info = styled.div`
     text-align: left;
