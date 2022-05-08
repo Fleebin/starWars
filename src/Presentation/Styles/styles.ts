@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+    max-width: 1196px;
+    margin: 0px auto;
+`;
 export const Nav = styled.nav`
     background: #0F0F0F;
     padding: 1.875rem 0rem;
@@ -22,17 +26,6 @@ export const Nav = styled.nav`
         color: #FAFAFA;
     }
 `;
-export const Card = styled.div`
-    background-color: #303030;
-    border: 0.125rem solid #606060;
-    opacity: 1;
-    padding: 1.5rem 1rem;
-    max-width: 273px;
-    height: 448px;
-`;
-export const Info = styled.div`
-    text-align: left;
-`;
 export const Title = styled.h1`
     font-size: 1.5rem;
     color: #FFE81F;
@@ -45,20 +38,15 @@ export const Description = styled.p`
     font-size: 0.875rem;
     color: #FAFAFA;
 `;
-export const Footer = styled.div`
-    display: flex;
-    justify-content: center;
-    .link {
-        color: #FFE81F;
-        text-decoration: none;
-        border: 0.125rem #FFE81F solid;
-        margin-top: 35px;
-        padding: 8px 36px;
+export const Input = styled.input`
+    border: 2px solid #606060;
+    background: #303030;
+    width: 570px;
+    height: 40px;
+    margin: 42px 0 32px 0;
+    ::placeholder {
+        color: #FAFAFA;
+        text-transform: uppercase;
+        padding-left: 44px;
     }
-`;
-export const Grid = styled.div`
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-row-gap: 24px; 
 `;
